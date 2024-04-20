@@ -1,11 +1,11 @@
 Experimental install script that replaces python script under backstage-showcase.
 
-```
+```bash
 go run main.go --dynamic-plugins-file my-plugins.yaml --dynamic-plugins-root target-folder-for-plugins --skip-integrity-check false
 ```
 
 Example `my-plugins.yaml`:
-```
+```yaml
 includes:
   - ./dynamic-plugins.default.yaml
 plugins:
