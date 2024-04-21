@@ -123,7 +123,7 @@ func main() {
 				return
 			}
 			archive := path.Join(*dynamicPluginsRoot, strings.TrimSuffix(string(out), "\n"))
-			if !isLocal && !*skipIntegrityCheck {
+			if isLocal || !*skipIntegrityCheck {
 				fmt.Printf("performing integrity check on package %s: ", myPackage)
 				err := integrityCheck(plugin, archive)
 				if err != nil {
